@@ -1,0 +1,1 @@
+Local TechPulse experiments, November 2026. Each directory contains the benchmark code and its recorded results. Decompress .json.gz files before running chart scripts. The routing replay is the current draft. Publication accounts, tokens, drafts and scheduling state are excluded.

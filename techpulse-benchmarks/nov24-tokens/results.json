@@ -1,0 +1,124 @@
+{
+  "Sarvam": {
+    "repo": "sarvamai/sarvam-30b",
+    "revision": "2784c524a2f2a08f597adc5530d13ec66079e347",
+    "sha256": "a574ceaaff7c7a8f091179c53fd17ae33567089c099d4ff37d4cb3bc1a87e80e",
+    "counts": [
+      {
+        "English": 5,
+        "Hindi": 6,
+        "Tamil": 6,
+        "Telugu": 5
+      },
+      {
+        "English": 5,
+        "Hindi": 7,
+        "Tamil": 10,
+        "Telugu": 8
+      },
+      {
+        "English": 3,
+        "Hindi": 6,
+        "Tamil": 5,
+        "Telugu": 8
+      },
+      {
+        "English": 4,
+        "Hindi": 5,
+        "Tamil": 9,
+        "Telugu": 10
+      },
+      {
+        "English": 5,
+        "Hindi": 7,
+        "Tamil": 9,
+        "Telugu": 7
+      },
+      {
+        "English": 5,
+        "Hindi": 8,
+        "Tamil": 8,
+        "Telugu": 9
+      },
+      {
+        "English": 5,
+        "Hindi": 8,
+        "Tamil": 6,
+        "Telugu": 8
+      },
+      {
+        "English": 6,
+        "Hindi": 7,
+        "Tamil": 6,
+        "Telugu": 7
+      }
+    ],
+    "totals": {
+      "English": 38,
+      "Hindi": 54,
+      "Tamil": 59,
+      "Telugu": 62
+    }
+  },
+  "Qwen": {
+    "repo": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "counts": [
+      {
+        "English": 5,
+        "Hindi": 20,
+        "Tamil": 30,
+        "Telugu": 29
+      },
+      {
+        "English": 5,
+        "Hindi": 27,
+        "Tamil": 43,
+        "Telugu": 51
+      },
+      {
+        "English": 3,
+        "Hindi": 17,
+        "Tamil": 18,
+        "Telugu": 29
+      },
+      {
+        "English": 4,
+        "Hindi": 13,
+        "Tamil": 31,
+        "Telugu": 37
+      },
+      {
+        "English": 5,
+        "Hindi": 18,
+        "Tamil": 27,
+        "Telugu": 29
+      },
+      {
+        "English": 5,
+        "Hindi": 22,
+        "Tamil": 29,
+        "Telugu": 35
+      },
+      {
+        "English": 5,
+        "Hindi": 26,
+        "Tamil": 40,
+        "Telugu": 43
+      },
+      {
+        "English": 6,
+        "Hindi": 16,
+        "Tamil": 28,
+        "Telugu": 35
+      }
+    ],
+    "totals": {
+      "English": 38,
+      "Hindi": 159,
+      "Tamil": 246,
+      "Telugu": 288
+    }
+  }
+}

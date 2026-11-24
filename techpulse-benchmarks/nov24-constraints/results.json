@@ -1,0 +1,70 @@
+{
+  "version": "4.3.2",
+  "expectedPriority": "high",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "priority": {
+        "type": "string",
+        "enum": [
+          "low",
+          "high"
+        ]
+      }
+    },
+    "required": [
+      "priority"
+    ],
+    "additionalProperties": false
+  },
+  "results": [
+    {
+      "name": "Correct label",
+      "candidate": "{\"priority\":\"high\"}",
+      "accepted": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Wrong label",
+      "candidate": "{\"priority\":\"low\"}",
+      "accepted": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Unknown label",
+      "candidate": "{\"priority\":\"urgent\"}",
+      "accepted": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Missing field",
+      "candidate": "{}",
+      "accepted": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Extra field",
+      "candidate": "{\"priority\":\"high\",\"note\":\"ok\"}",
+      "accepted": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Broken JSON",
+      "candidate": "{\"priority\":}",
+      "accepted": [
+        false,
+        false
+      ]
+    }
+  ]
+}

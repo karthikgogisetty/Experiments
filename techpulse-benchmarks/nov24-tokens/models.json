@@ -1,0 +1,10 @@
+{
+  "Sarvam": {
+    "repo": "sarvamai/sarvam-30b",
+    "revision": "2784c524a2f2a08f597adc5530d13ec66079e347"
+  },
+  "Qwen": {
+    "repo": "Qwen/Qwen3-30B-A3B",
+    "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39"
+  }
+}

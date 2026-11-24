@@ -1,0 +1,93 @@
+{
+  "version": "1.20.1",
+  "collection": {
+    "status": "green",
+    "optimizer_status": "ok",
+    "indexed_vectors_count": 30000,
+    "points_count": 30000,
+    "segments_count": 2,
+    "config": {
+      "params": {
+        "vectors": {
+          "product": {
+            "size": 768,
+            "distance": "Cosine",
+            "on_disk": true
+          }
+        },
+        "shard_number": 1,
+        "replication_factor": 1,
+        "write_consistency_factor": 1,
+        "on_disk_payload": true
+      },
+      "hnsw_config": {
+        "m": 16,
+        "ef_construct": 100,
+        "full_scan_threshold": 10000,
+        "max_indexing_threads": 0,
+        "on_disk": false
+      },
+      "optimizer_config": {
+        "deleted_threshold": 0.2,
+        "vacuum_min_vector_number": 1000,
+        "default_segment_number": 1,
+        "max_segment_size": null,
+        "memmap_threshold": null,
+        "indexing_threshold": 1000,
+        "flush_interval_sec": 5,
+        "max_optimization_threads": null,
+        "prevent_unoptimized": null
+      },
+      "wal_config": {
+        "wal_capacity_mb": 32,
+        "wal_segments_ahead": 0,
+        "wal_retain_closed": 1
+      },
+      "quantization_config": {
+        "scalar": {
+          "type": "int8",
+          "always_ram": true
+        }
+      }
+    },
+    "payload_schema": {},
+    "update_queue": {
+      "length": 0
+    },
+    "created_at": "2026-11-21T19:49:30.812Z"
+  },
+  "samples_ms": [
+    37.77904203161597,
+    36.317541962489486,
+    42.432582937180996,
+    38.57524995692074,
+    41.122832801193,
+    40.12000001966953,
+    43.43466693535447,
+    39.74250005558133,
+    40.370000060647726,
+    41.08066693879664,
+    38.158874958753586,
+    41.262707905843854,
+    38.912124931812286,
+    36.50483419187367,
+    41.21458320878446,
+    41.327874874696136,
+    34.03679095208645,
+    39.16708403266966,
+    37.03437512740493,
+    38.075166987255216,
+    38.28616696409881,
+    42.85354190506041,
+    39.4744579680264,
+    37.26116707548499,
+    40.60179088264704,
+    37.79254201799631,
+    39.72125006839633,
+    44.391792034730315,
+    51.236792001873255,
+    37.47533401474357
+  ],
+  "identical_top10": 210,
+  "single_checks": 210
+}
