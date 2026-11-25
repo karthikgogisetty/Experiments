@@ -1,0 +1,7 @@
+Would I wait for a server that already had my prompt prefix cached?
+
+I tested it on four local CPU servers. Nine of every twelve requests shared the same opening text. Sending them to the warm server nudged p95 queue wait from 32.2 to 32.8 ms. But the first text still arrived sooner at p95: 33.5 ms, down from 38.2 ms with round robin.
+
+That’s a 12% drop across 288 requests per policy. I’d test the same trade-off with GPU batching before choosing a production router.
+
+#LLMInference #MLSystems #PrefixCaching
