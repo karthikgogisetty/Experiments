@@ -8,9 +8,9 @@ In this burst test, nine of twelve requests shared a prefix. Sending them to the
 
 ## Can the agent see the tool it needs?
 
-![Tool shortlist coverage and schema size](techpulse-benchmarks/tool-shortlist/chart.svg)
+![Keyword and embedding search compared on 200 questions](techpulse-benchmarks/tool-shortlist/semantic-chart.svg)
 
-On 200 BFCL questions, doubling the shortlist from five tools to ten recovered five exact target schemas. Six targets were still missing at ten. [Method and raw ranks](techpulse-benchmarks/tool-shortlist/)
+MiniLM ranked the currency converter second. Across all 200 questions it recovered five keyword misses and lost seven keyword hits. Median local search latency was 0.22 ms with BM25 and 26.56 ms with MiniLM. [Paired comparison](techpulse-benchmarks/tool-shortlist/SEMANTIC.md) · [Raw measurements](techpulse-benchmarks/tool-shortlist/semantic-results.json) · [Original shortlist-size test](techpulse-benchmarks/tool-shortlist/)
 
 ## Agent decisions and retrieval
 

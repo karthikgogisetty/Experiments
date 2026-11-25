@@ -1,0 +1,7 @@
+# Keyword versus embedding retrieval at five tools
+
+Use the same upstream files as [the original run](README.md). Save them as cases and labels in a temporary directory. Add tokenizer.json and onnx/model_qint8_arm64.onnx (basename only) from [all-MiniLM-L6-v2 at the tested revision](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41). On the test Mac, Python 3.12 used onnxruntime 1.22.1, tokenizers 0.23.2, and numpy 2.2.6. Run python semantic.py TEMP_DIR. Run semantic_chart.py with Pillow on macOS for the chart.
+
+Both methods index identical schema names, descriptions and parameter names. The baseline uses the original SQLite FTS5 BM25 query with LIMIT 5. Each baseline rank is checked against the preceding run. MiniLM mean-pools the last hidden layer over an unpadded input, L2-normalizes each embedding, and scores all 480 schemas by cosine similarity. The catalog is embedded once; each question is encoded afresh.
+
+Three seeded shuffled passes, alternating method order, produce 600 single-query timings per method. Times cover query preparation through the five returned IDs. Warmup, catalog construction, scoring against labels and language model generation are excluded. CPUExecutionProvider uses one inference thread. Correctness uses 200 unique questions. No tool aliases receive partial credit. This is a custom pooled-catalog retrieval test, not the official BFCL evaluation.
