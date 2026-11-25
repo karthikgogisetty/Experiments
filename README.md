@@ -6,6 +6,12 @@ I run small ML and systems experiments to find out where an engineering decision
 
 In this burst test, nine of twelve requests shared a prefix. Sending them to the same warm replica increased p95 queue wait from 32.2 to 32.8 ms, yet first text arrived sooner. I timed 288 requests per policy on four CPU replicas. [Method](techpulse-benchmarks/nov24-routing/SERVING.md) · [Request timings](techpulse-benchmarks/nov24-routing/local-serving.json)
 
+## Can the agent see the tool it needs?
+
+![Tool shortlist coverage and schema size](techpulse-benchmarks/tool-shortlist/chart.svg)
+
+On 200 BFCL questions, doubling the shortlist from five tools to ten recovered five exact target schemas. Six targets were still missing at ten. [Method and raw ranks](techpulse-benchmarks/tool-shortlist/)
+
 ## Agent decisions and retrieval
 
 | Engineering question | Implementation | Evidence |
