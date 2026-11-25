@@ -1,0 +1,886 @@
+[
+  {
+    "format": "q4_k_m",
+    "layers": [
+      "25",
+      "25"
+    ],
+    "peak_process_bytes": 657195008,
+    "file_bytes": 491400064,
+    "results": [
+      {
+        "task": "daily",
+        "answer": "SELECT day, SUM(amount) FROM sales GROUP BY day ORDER BY day",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 325.6349579896778,
+        "tokens": 15
+      },
+      {
+        "task": "ties",
+        "answer": "SELECT id FROM sales ORDER BY amount DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 134.92929097265005,
+        "tokens": 12
+      },
+      {
+        "task": "second",
+        "answer": "SELECT DISTINCT amount FROM sales ORDER BY amount DESC LIMIT 2",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 141.05674996972084,
+        "tokens": 13
+      },
+      {
+        "task": "missing",
+        "answer": "SELECT shop FROM sales WHERE day != 2 ORDER BY shop ASC",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 149.8765000142157,
+        "tokens": 14
+      },
+      {
+        "task": "running",
+        "answer": "```sql\nSELECT id, SUM(amount) OVER (PARTITION BY shop ORDER BY id) AS cumulative_amount\nFROM sales\nWHERE day = (SELECT MAX(day) FROM sales);\n```",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 387.8877500537783,
+        "tokens": 39
+      },
+      {
+        "task": "above",
+        "answer": "SELECT id FROM sales WHERE shop = (SELECT shop FROM sales ORDER BY amount DESC LIMIT 1)",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 218.0482498370111,
+        "tokens": 21
+      },
+      {
+        "task": "latest",
+        "answer": "SELECT shop, id FROM sales ORDER BY shop, id DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 175.29912502504885,
+        "tokens": 16
+      },
+      {
+        "task": "pairs",
+        "answer": "SELECT shop, COUNT(DISTINCT day) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 190.03470800817013,
+        "tokens": 18
+      },
+      {
+        "task": "previous",
+        "answer": "SELECT id, amount - COALESCE(previous_amount, 0) FROM sales ORDER BY id",
+        "finish": "stop",
+        "passed": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 221.61383414641023,
+        "tokens": 20
+      },
+      {
+        "task": "share",
+        "answer": "SELECT shop, CAST(amount AS REAL) / SUM(amount) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 354.84391706995666,
+        "tokens": 21
+      }
+    ]
+  },
+  {
+    "format": "q8_0",
+    "layers": [
+      "25",
+      "25"
+    ],
+    "peak_process_bytes": 825212928,
+    "file_bytes": 675710848,
+    "results": [
+      {
+        "task": "daily",
+        "answer": "SELECT day, SUM(amount) FROM sales GROUP BY day ORDER BY day",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 279.52250000089407,
+        "tokens": 15
+      },
+      {
+        "task": "ties",
+        "answer": "SELECT id FROM sales ORDER BY amount DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 150.09566606022418,
+        "tokens": 12
+      },
+      {
+        "task": "second",
+        "answer": "SELECT DISTINCT amount FROM sales ORDER BY amount DESC LIMIT 2",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 170.9022920113057,
+        "tokens": 13
+      },
+      {
+        "task": "missing",
+        "answer": "SELECT shop FROM sales WHERE day != 2 ORDER BY shop ASC",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 182.0986249949783,
+        "tokens": 14
+      },
+      {
+        "task": "running",
+        "answer": "```sql\nSELECT id, SUM(amount) AS cumulative_amount\nFROM sales\nWHERE shop IN ('Shop A', 'Shop B', 'Shop C')\nGROUP BY shop\nORDER BY id;\n```",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 481.263792142272,
+        "tokens": 41
+      },
+      {
+        "task": "above",
+        "answer": "SELECT id FROM sales WHERE shop = (SELECT shop FROM sales ORDER BY amount DESC LIMIT 1)",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 253.55445803143084,
+        "tokens": 21
+      },
+      {
+        "task": "latest",
+        "answer": "SELECT shop, id FROM sales ORDER BY shop, id DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 192.2372078988701,
+        "tokens": 16
+      },
+      {
+        "task": "pairs",
+        "answer": "SELECT shop, COUNT(DISTINCT day) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 215.14887502416968,
+        "tokens": 18
+      },
+      {
+        "task": "previous",
+        "answer": "SELECT id, amount - COALESCE(previous_amount, 0) FROM sales ORDER BY id",
+        "finish": "stop",
+        "passed": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 248.94820805639029,
+        "tokens": 20
+      },
+      {
+        "task": "share",
+        "answer": "SELECT shop, CAST(amount AS REAL) / SUM(amount) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 246.59045902080834,
+        "tokens": 21
+      }
+    ]
+  },
+  {
+    "format": "q8_0",
+    "layers": [
+      "25",
+      "25"
+    ],
+    "peak_process_bytes": 848707584,
+    "file_bytes": 675710848,
+    "results": [
+      {
+        "task": "daily",
+        "answer": "SELECT day, SUM(amount) FROM sales GROUP BY day ORDER BY day",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 180.32062496058643,
+        "tokens": 15
+      },
+      {
+        "task": "ties",
+        "answer": "SELECT id FROM sales ORDER BY amount DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 151.05133294127882,
+        "tokens": 12
+      },
+      {
+        "task": "second",
+        "answer": "SELECT DISTINCT amount FROM sales ORDER BY amount DESC LIMIT 2",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 160.7657908461988,
+        "tokens": 13
+      },
+      {
+        "task": "missing",
+        "answer": "SELECT shop FROM sales WHERE day != 2 ORDER BY shop ASC",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 163.82391704246402,
+        "tokens": 14
+      },
+      {
+        "task": "running",
+        "answer": "```sql\nSELECT id, SUM(amount) AS cumulative_amount\nFROM sales\nWHERE shop IN ('Shop A', 'Shop B', 'Shop C')\nGROUP BY shop\nORDER BY id;\n```",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 471.1312078870833,
+        "tokens": 41
+      },
+      {
+        "task": "above",
+        "answer": "SELECT id FROM sales WHERE shop = (SELECT shop FROM sales ORDER BY amount DESC LIMIT 1)",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 249.0790830925107,
+        "tokens": 21
+      },
+      {
+        "task": "latest",
+        "answer": "SELECT shop, id FROM sales ORDER BY shop, id DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 192.5573330372572,
+        "tokens": 16
+      },
+      {
+        "task": "pairs",
+        "answer": "SELECT shop, COUNT(DISTINCT day) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 212.32216688804328,
+        "tokens": 18
+      },
+      {
+        "task": "previous",
+        "answer": "SELECT id, amount - COALESCE(previous_amount, 0) FROM sales ORDER BY id",
+        "finish": "stop",
+        "passed": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 251.94562505930662,
+        "tokens": 20
+      },
+      {
+        "task": "share",
+        "answer": "SELECT shop, CAST(amount AS REAL) / SUM(amount) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 248.22729104198515,
+        "tokens": 21
+      }
+    ]
+  },
+  {
+    "format": "q4_k_m",
+    "layers": [
+      "25",
+      "25"
+    ],
+    "peak_process_bytes": 659783680,
+    "file_bytes": 491400064,
+    "results": [
+      {
+        "task": "daily",
+        "answer": "SELECT day, SUM(amount) FROM sales GROUP BY day ORDER BY day",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 157.045790925622,
+        "tokens": 15
+      },
+      {
+        "task": "ties",
+        "answer": "SELECT id FROM sales ORDER BY amount DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 128.64800007082522,
+        "tokens": 12
+      },
+      {
+        "task": "second",
+        "answer": "SELECT DISTINCT amount FROM sales ORDER BY amount DESC LIMIT 2",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 141.42995793372393,
+        "tokens": 13
+      },
+      {
+        "task": "missing",
+        "answer": "SELECT shop FROM sales WHERE day != 2 ORDER BY shop ASC",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 146.5334591921419,
+        "tokens": 14
+      },
+      {
+        "task": "running",
+        "answer": "```sql\nSELECT id, SUM(amount) OVER (PARTITION BY shop ORDER BY id) AS cumulative_amount\nFROM sales\nWHERE day = (SELECT MAX(day) FROM sales);\n```",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 397.4137499462813,
+        "tokens": 39
+      },
+      {
+        "task": "above",
+        "answer": "SELECT id FROM sales WHERE shop = (SELECT shop FROM sales ORDER BY amount DESC LIMIT 1)",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 224.88562506623566,
+        "tokens": 21
+      },
+      {
+        "task": "latest",
+        "answer": "SELECT shop, id FROM sales ORDER BY shop, id DESC LIMIT 1",
+        "finish": "stop",
+        "passed": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 176.98695906437933,
+        "tokens": 16
+      },
+      {
+        "task": "pairs",
+        "answer": "SELECT shop, COUNT(DISTINCT day) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "ms": 202.16420921497047,
+        "tokens": 18
+      },
+      {
+        "task": "previous",
+        "answer": "SELECT id, amount - COALESCE(previous_amount, 0) FROM sales ORDER BY id",
+        "finish": "stop",
+        "passed": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 233.90579083934426,
+        "tokens": 20
+      },
+      {
+        "task": "share",
+        "answer": "SELECT shop, CAST(amount AS REAL) / SUM(amount) FROM sales GROUP BY shop ORDER BY shop",
+        "finish": "stop",
+        "passed": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "ms": 229.4540829025209,
+        "tokens": 21
+      }
+    ]
+  }
+]

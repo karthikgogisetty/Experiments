@@ -14,6 +14,12 @@ In this burst test, nine of twelve requests shared a prefix. Sending them to the
 | Is it worth reranking 50 SciFact candidates instead of 10? | [Reranker](techpulse-benchmarks/nov23-retrieval/rerank.py) | [Ranking and latency results](techpulse-benchmarks/nov23-retrieval/rerank-results.json.gz) |
 | How do output constraints affect generation? | [Constraint experiment](techpulse-benchmarks/nov24-constraints/experiment.mjs) | [Results](techpulse-benchmarks/nov24-constraints/results.json) |
 
+## Would I ship the 4-bit SQL model?
+
+Both formats passed the same **2 of 10** SQL tasks. On the per-shop maximum task, both returned a single row for the whole table. Q4_K_M used **629 MiB** peak process memory versus **809 MiB** for Q8_0. I would change the model before spending more memory on precision for this workload.
+
+[GPU experiment and method](techpulse-benchmarks/nov26-quant/) · [Generated queries and fixture results](techpulse-benchmarks/nov26-quant/results.json)
+
 ## Inference and storage
 
 | Engineering question | Implementation | Evidence |
