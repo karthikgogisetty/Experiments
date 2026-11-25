@@ -1,0 +1,242 @@
+[
+  {
+    "prompt": "Start a 15-minute timer.",
+    "expected": "set_timer",
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "How many seconds are in a 15-minute timer?",
+    "expected": null,
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the speaker volume to 15 percent.",
+    "expected": "set_volume",
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_volume{percent:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What does 15 percent speaker volume mean?",
+    "expected": null,
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:15,minutes:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the thermostat to 15 degrees Celsius.",
+    "expected": "set_temperature",
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What is 15 degrees Celsius in Fahrenheit?",
+    "expected": null,
+    "value": 15,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:15}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Start a 20-minute timer.",
+    "expected": "set_timer",
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "How many seconds are in a 20-minute timer?",
+    "expected": null,
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the speaker volume to 20 percent.",
+    "expected": "set_volume",
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:10}<end_function_call><start_function_call>call:set_volume{percent:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What does 20 percent speaker volume mean?",
+    "expected": null,
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the thermostat to 20 degrees Celsius.",
+    "expected": "set_temperature",
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What is 20 degrees Celsius in Fahrenheit?",
+    "expected": null,
+    "value": 20,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:20}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Start a 25-minute timer.",
+    "expected": "set_timer",
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "How many seconds are in a 25-minute timer?",
+    "expected": null,
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the speaker volume to 25 percent.",
+    "expected": "set_volume",
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_volume{percent:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What does 25 percent speaker volume mean?",
+    "expected": null,
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the thermostat to 25 degrees Celsius.",
+    "expected": "set_temperature",
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What is 25 degrees Celsius in Fahrenheit?",
+    "expected": null,
+    "value": 25,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:25}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Start a 30-minute timer.",
+    "expected": "set_timer",
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:30}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "How many seconds are in a 30-minute timer?",
+    "expected": null,
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:30}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the speaker volume to 30 percent.",
+    "expected": "set_volume",
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_volume{percent:30}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What does 30 percent speaker volume mean?",
+    "expected": null,
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_timer{minutes:30}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "Set the thermostat to 30 degrees Celsius.",
+    "expected": "set_temperature",
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:30}<end_function_call>"
+    },
+    "finish": "stop"
+  },
+  {
+    "prompt": "What is 30 degrees Celsius in Fahrenheit?",
+    "expected": null,
+    "value": 30,
+    "message": {
+      "role": "assistant",
+      "content": "<start_function_call>call:set_temperature{degrees:220}<end_function_call>"
+    },
+    "finish": "stop"
+  }
+]

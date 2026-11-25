@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 292" role="img" aria-labelledby="title desc">
+<title id="title">When nine requests want one server</title><desc id="desc">On four local CPU replicas, round robin took 38.2 ms p95 to first text, compared with 33.5 ms for fixed prefix affinity.</desc>
+<rect width="1000" height="292" rx="18" fill="#102c30"/>
+<g font-family="system-ui,sans-serif" fill="#f1f5e8">
+<text x="40" y="47" font-size="16" letter-spacing="2" fill="#a3d9cb">LLM SERVING   /   LOCAL CPU EXPERIMENT</text>
+<text x="40" y="101" font-weight="700" font-size="38">When nine requests want one server</text>
+<text x="41" y="141" font-size="20">p95 time to first streamed text, including queue wait</text>
+<text x="41" y="201" font-size="23">Round robin</text><rect x="250" y="180" width="535" height="24" rx="5" fill="#acb8cb"/><text x="807" y="201" font-size="23">38.2 ms</text>
+<text x="41" y="254" font-size="23">Warm cache</text><rect x="250" y="233" width="469" height="24" rx="5" fill="#76e2bc"/><text x="741" y="254" font-size="23">33.5 ms</text>
+</g></svg>
