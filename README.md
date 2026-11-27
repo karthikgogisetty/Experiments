@@ -12,6 +12,8 @@ In this burst test, nine of twelve requests shared a prefix. Sending them to the
 
 MiniLM ranked the currency converter second. Across all 200 questions it recovered five keyword misses and lost seven keyword hits. Median local search latency was 0.22 ms with BM25 and 26.56 ms with MiniLM. [Paired comparison](techpulse-benchmarks/tool-shortlist/SEMANTIC.md) · [Raw measurements](techpulse-benchmarks/tool-shortlist/semantic-results.json) · [Original shortlist-size test](techpulse-benchmarks/tool-shortlist/)
 
+The five-slot hybrid recovered five BM25 misses, including the currency converter, and displaced one BM25 hit. It reached 193/200 at 29.66 ms median on the local CPU. [Hybrid chart, rule and paired timings](techpulse-benchmarks/tool-shortlist/HYBRID.md)
+
 ## Agent decisions and retrieval
 
 | Engineering question | Implementation | Evidence |
