@@ -14,6 +14,10 @@ MiniLM ranked the currency converter second. Across all 200 questions it recover
 
 The five-slot hybrid recovered five BM25 misses, including the currency converter, and displaced one BM25 hit. It reached 193/200 at 29.66 ms median on the local CPU. [Hybrid chart, rule and paired timings](techpulse-benchmarks/tool-shortlist/HYBRID.md)
 
+![Tool-call success through the routing pipeline](techpulse-benchmarks/tool-shortlist/call-chart.svg)
+
+The caller passed the tool-and-arguments check on 70/200 keyword requests and 76/200 hybrid requests. None of the five newly exposed tools became a correct full call. [Paired model outputs and system design](techpulse-benchmarks/tool-shortlist/CALLS.md)
+
 ## Agent decisions and retrieval
 
 | Engineering question | Implementation | Evidence |
